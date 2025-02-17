@@ -1,0 +1,93 @@
+/* Fix button styling */
+.action-button {
+  background-color: #f8f9fa;
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  padding: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  width: 80px;
+}
+
+.action-button:hover {
+  background-color: #f1f3f4;
+  border-color: #4285f4;
+}
+
+.action-button i {
+  font-size: 16px; /* Reduced from 20px */
+  color: #4285f4;
+  margin-bottom: 6px;
+}
+
+.action-button span {
+  font-size: 11px;
+  font-weight: 500;
+  color: #5f6368;
+}
+
+/* Fix statistics sizing */
+.stat-box {
+  background-color: #f8f9fa;
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+}
+
+.stat-icon {
+  font-size: 18px; /* Reduced from 24px */
+  color: #4285f4;
+  margin-bottom: 4px;
+}
+
+.stat-value {
+  font-size: 18px; /* Reduced from 22px */
+  font-weight: bold;
+  color: #202124;
+  margin-bottom: 4px;
+}
+
+.stat-label {
+  font-size: 11px;
+  color: #5f6368;
+}
+
+/* Adjust container spacing */
+.container {
+  width: 320px; /* Reduced from 350px */
+  padding: 16px;
+}
+
+/* Fix header sizing */
+.logo {
+  width: 32px; /* Reduced from 40px */
+  height: 32px;
+  margin-right: 8px;
+}
+
+h1 {
+  font-size: 18px; /* Reduced from 22px */
+}
+
+/* Make toggle switch more compact */
+.switch {
+  width: 40px; /* Reduced from 50px */
+  height: 20px; /* Reduced from 24px */
+}
+
+.slider:before {
+  height: 16px; /* Reduced from 18px */
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}

@@ -1,0 +1,47 @@
+{
+  "manifest_version": 3,
+  "name": "Ad Fraud Detector",
+  "version": "1.0",
+  "description": "Real-time ad fraud detection for websites",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "webRequest",
+    "downloads"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["utils.js", "content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "image01.png",
+      "48": "image01.png",
+      "128": "image01.png"
+    }
+  },
+  "icons": {
+    "16": "image01.png",
+    "48": "image01.png",
+    "128": "image01.png"
+  },
+  "options_page": "options.html",
+  "web_accessible_resources": [{
+    "resources": ["scripts/*", "styles/*"],
+    "matches": ["<all_urls>"]
+  }]
+}

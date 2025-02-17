@@ -1,0 +1,67 @@
+/* Enhanced button styling */
+button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #f0f0f0;
+  color: #333;
+  position: relative;
+  overflow: hidden;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Primary action buttons */
+.primary-button {
+  background: linear-gradient(135deg, #4285f4, #3367d6);
+  color: white;
+}
+
+.primary-button:hover {
+  background: linear-gradient(135deg, #5295f5, #4377e6);
+}
+
+/* Report generation button */
+#generateReportBtn {
+  background: linear-gradient(135deg, #34a853, #2e8f49);
+  color: white;
+  margin-top: 20px;
+}
+
+#generateReportBtn:hover {
+  background: linear-gradient(135deg, #3db85f, #339f53);
+}
+
+/* Report website button */
+#reportWebsiteBtn {
+  background: linear-gradient(135deg, #ea4335, #d33426);
+  color: white;
+  margin-top: 10px;
+}
+
+#reportWebsiteBtn:hover {
+  background: linear-gradient(135deg, #eb5447, #db4538);
+}
+
+/* Animation for status messages */
+.status-message {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.3s ease;
+}
+
+.status-message.show {
+  opacity: 1;
+  transform: translateY(0);
+}

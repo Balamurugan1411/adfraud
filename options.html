@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ad Fraud Detector - Options</title>
+  <link rel="stylesheet" href="styles/options.css">
+  <!-- Replace CDN references with local files -->
+  <script src="scripts/pdfmake.min.js"></script>
+  <script src="scripts/vfs_fonts.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Ad Fraud Detector Settings</h1>
+    </header>
+    
+    <section class="settings-section">
+      <h2>Detection Settings</h2>
+      
+      <div class="setting-group">
+        <label for="fraudThreshold">Fraud Detection Threshold</label>
+        <div class="slider-container">
+          <input type="range" id="fraudThreshold" min="0" max="1" step="0.05" value="0.7">
+          <span id="thresholdValue">0.7</span>
+        </div>
+        <p class="setting-description">
+          Higher values mean fewer false positives but may miss some fraudulent ads.
+          Lower values catch more potential fraud but may include legitimate ads.
+        </p>
+      </div>
+      
+      <div class="setting-group">
+        <label for="mlEndpoint">ML Service Endpoint</label>
+        <input type="text" id="mlEndpoint" class="text-input" 
+               value="https://api.adfrauddetector.com/analyze">
+        <p class="setting-description">
+          URL of the machine learning service for ad analysis.
+          Only change if you're using a custom deployment.
+        </p>
+      </div>
+    </section>
+    
+    <section class="settings-section">
+      <h2>Report Generation</h2>
+      <div class="report-actions">
+        <button id="generateReportBtn" class="primary-button">
+          <i class="fas fa-file-pdf"></i> Generate PDF Report
+        </button>
+        <button id="reportWebsiteBtn" class="secondary-button">
+          <i class="fas fa-external-link-alt"></i> Report Fraud Online
+        </button>
+      </div>
+      <div id="reportStatus" class="status-message"></div>
+    </section>
+    
+    <section class="settings-section">
+      <h2>Notification Settings</h2>
+      
+      <div class="setting-group checkbox-group">
+        <input type="checkbox" id="showNotifications" checked>
+        <label for="showNotifications">Show popup notifications</label>
+      </div>
+      
+      <div class="setting-group checkbox-group">
+        <input type="checkbox" id="highlightAds" checked>
+        <label for="highlightAds">Highlight fraudulent ads on page</label>
+      </div>
+    </section>
+    
+    <section class="settings-section">
+      <h2>Data and Privacy</h2>
+      
+      <div class="setting-group checkbox-group">
+        <input type="checkbox" id="sendAnonymousStats" checked>
+        <label for="sendAnonymousStats">Share anonymous detection statistics</label>
+        <p class="setting-description">
+          Helps improve detection algorithms. No personal data is shared.
+        </p>
+      </div>
+      
+      <div class="setting-group">
+        <button id="clearDataBtn" class="danger-button">Clear All Stored Data</button>
+        <p class="setting-description">
+          Removes all locally stored detection history and settings.
+        </p>
+      </div>
+    </section>
+    
+    <div class="button-row">
+      <button id="resetBtn">Reset to Defaults</button>
+      <button id="saveBtn" class="primary-button">Save Changes</button>
+    </div>
+    
+    <div id="saveConfirmation" class="hidden">
+      Settings saved successfully!
+    </div>
+  </div>
+  
+  <script src="options.js"></script>
+</body>
+</html>

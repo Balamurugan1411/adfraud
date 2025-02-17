@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ad Fraud Detector</title>
+  <link rel="stylesheet" href="styles/popup.css">
+  <!-- Replace CDN references with local files -->
+  <link href="styles/fontawesome/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo-container">
+        <img src="image01.png" alt="Ad Fraud Detector Logo" class="logo">
+        <h1>Ad Fraud Detector</h1>
+      </div>
+      <div class="toggle-container">
+        <span class="toggle-label">Protection</span>
+        <label class="switch">
+          <input type="checkbox" id="enableToggle" checked>
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </header>
+    
+    <section class="statistics">
+      <h2><i class="fas fa-chart-bar"></i> Statistics</h2>
+      <div class="stat-grid">
+        <div class="stat-box">
+          <div class="stat-icon"><i class="fas fa-search"></i></div>
+          <span class="stat-value" id="scannedAds">0</span>
+          <span class="stat-label">Ads Scanned</span>
+        </div>
+        <div class="stat-box">
+          <div class="stat-icon"><i class="fas fa-shield-alt"></i></div>
+          <span class="stat-value" id="detectedFrauds">0</span>
+          <span class="stat-label">Frauds Detected</span>
+        </div>
+      </div>
+      <div class="last-scan">
+        <i class="far fa-clock"></i>
+        <span class="label">Last Scan:</span>
+        <span id="lastScan" class="timestamp">Never</span>
+      </div>
+    </section>
+    
+    <section class="actions">
+      <h2><i class="fas fa-tasks"></i> Actions</h2>
+      <div class="button-grid">
+        <button id="scanPageBtn" class="action-button">
+          <i class="fas fa-search"></i>
+          <span>Scan Page</span>
+        </button>
+        <button id="viewReportBtn" class="action-button">
+          <i class="fas fa-file-alt"></i>
+          <span>View Report</span>
+        </button>
+        <button id="optionsBtn" class="action-button">
+          <i class="fas fa-cog"></i>
+          <span>Settings</span>
+        </button>
+      </div>
+    </section>
+    
+    <footer>
+      <p><i class="fas fa-brain"></i> Powered by ML-based ad fraud detection</p>
+      <p class="version">Version 1.0</p>
+    </footer>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
